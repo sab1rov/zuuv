@@ -1,0 +1,59 @@
+.main-info {
+  margin: 60px 0;
+  background: #ffe3e3;
+}
+
+.info {
+  @include flex(stretch, space-between);
+  gap: 5px;
+  &__item {
+    @include flex();
+    flex-direction: column;
+    background: $white;
+    width: 33%;
+    @include adaptive-value(padding-block, 220, 40, 1);
+    @include adaptive-value(padding-inline, 60, 40, 1);
+    text-align: center;
+    transition: $transition;
+    &-title {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 600;
+      @include adaptive-value(font-size, 22, 14, 1);
+      @include adaptive-value(line-height, 33, 21, 1);
+      color: $black;
+      margin: 20px 0;
+    }
+    &-desc {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: $fontWeight;
+      @include adaptive-value(font-size, 16, 12, 1);
+      @include adaptive-value(line-height, 24, 18, 1);
+      text-align: center;
+      color: #6f6f6f;
+    }
+    &:hover {
+      background: #e3365a;
+      .info__item-title {
+        color: $white;
+      }
+      .info__item-desc {
+        color: $white;
+      }
+      .info__item-img {
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+    &__item{
+      width: 100%;
+    }
+  }
+}

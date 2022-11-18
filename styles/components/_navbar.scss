@@ -30,17 +30,21 @@
           font-size: 18px;
           line-height: 27px;
           color: #696969;
+          bottom: 0px;
+          left: 0;
+          width: 0%;
           transition: $transition;
+          &::before {
+            content: "";
+            position: absolute;
+            background: $red;
+            height: 2px;
+          }
           &:hover {
             color: $black;
-            &::after {
-              content: "";
-              position: absolute;
-              top: 0px;
-              left: 0;
+            &::before{
               width: 50%;
-              height: 2px;
-              background: $red;
+
             }
           }
         }
