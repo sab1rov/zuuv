@@ -1,11 +1,27 @@
 .main-express {
   margin: 60px 0;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: url(../../assets/Images/express_bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    @include adaptive-value(height, 240, 80, 1);
+    z-index: -1;
+    transform: translateY(30px);
+  }
+  @media screen and (max-width: 991px) {
+    margin: 20px 0;
+  }
 }
 
 .express {
   &__item {
     .express_text {
-      margin-left: 140px;
+      @include adaptive-value(margin-left, 140, 85, 1);
       &-title {
         font-family: $mainFont;
         font-style: normal;
@@ -14,16 +30,110 @@
         @include adaptive-value(font-size, 69, 27, 1);
         color: $black;
       }
+      @media screen and (max-width: 991px) {
+        text-align: center;
+        margin-left: 0px;
+      }
     }
     .express_content {
-      @include flex();
-      &-img{
+      @include flex(center, space-between);
+      @include adaptive-value(margin-left, 140, 85, 1);
+      margin-top: 55px;
+      gap: 32px;
+      &-img {
         @include adaptive-value(width, 285, 135, 1);
         @include adaptive-value(height, 615, 295, 1);
-        img{
-            width: 100%;
-            height: 100%;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url(../../assets/Icons/ExpressBefore.svg);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          @include adaptive-value(width, 173, 83, 1);
+          @include adaptive-value(height, 347, 167, 1);
+          transform: translate(-80%, -10%);
+          z-index: -1;
         }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          background: url(../../assets/Icons/ExpressAfter.svg);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          @include adaptive-value(width, 173, 83, 1);
+          @include adaptive-value(height, 347, 167, 1);
+          transform: translate(-20%, 10%);
+          z-index: -1;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-text {
+        max-width: 550px;
+        .main-title {
+          font-family: $mainFont;
+          font-style: normal;
+          font-weight: 600;
+          @include adaptive-value(font-size, 46, 18, 1);
+          @include adaptive-value(line-height, 69, 27, 1);
+          color: $black;
+          margin-bottom: 20px;
+        }
+        .main-desc {
+          font-family: $mainFont;
+          font-style: normal;
+          font-weight: $fontWeight;
+          @include adaptive-value(font-size, 22, 12, 1);
+          @include adaptive-value(line-height, 33, 18, 1);
+          color: $mainColor;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        flex-direction: column;
+        margin-left: 0px;
+        &-text {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .second_item {
+    @include adaptive-value(margin-top, 50, 20, 1);
+    .second_title {
+      text-align: right;
+      @include adaptive-value(margin-right, 140, 85, 1);
+      @media screen and (max-width: 991px) {
+        text-align: center;
+        margin-right: 0px;
+      }
+    }
+    .second_content {
+      margin-top: 30px;
+      @include adaptive-value(margin-right, 140, 85, 1);
+      margin-left: 0px;
+      &-img {
+        z-index: 4;
+        &::before {
+          right: 0;
+          background-image: url(../../assets/Icons/expressBeforeTwo.svg);
+          @include adaptive-value(width, 128, 77, 1);
+          @include adaptive-value(height, 106, 64, 1);
+          transform: translate(65%, -20%);
+        }
+        &::after {
+          background-image: url(../../assets/Icons/expressAfterTwo.svg);
+          @include adaptive-value(width, 128, 77, 1);
+          @include adaptive-value(height, 106, 64, 1);
+          left: 0;
+          transform: translate(-65%, 15%);
+        }
+      }
+      @media screen and (max-width: 991px) {
+        margin-right: 0px;
       }
     }
   }
