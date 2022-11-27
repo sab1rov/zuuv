@@ -46,7 +46,7 @@
         }
       }
       .second_img {
-        @include adaptive-value(width, 610, 330, 1);
+        @include adaptive-value(width, 610, 310, 1);
         @include adaptive-value(height, 375, 205, 1);
         img {
           width: 100%;

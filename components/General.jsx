@@ -11,7 +11,7 @@ import Train from "../assets/Images/Train.png";
 
 function General() {
   return (
-    <div className="main-general">
+    <div className="main-general" id="general">
       <div className="container">
         <div className="general">
           <div className="general__content">

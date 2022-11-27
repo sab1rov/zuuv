@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import Samsung from "../assets/Images/Samsung Galaxy S22 Ultra.png";
-import Apple from "../assets/Images/iPhone 13 Pro.png";
 
 function Upload() {
   return (

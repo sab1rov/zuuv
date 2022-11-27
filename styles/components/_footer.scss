@@ -1,0 +1,143 @@
+.footer {
+  @include adaptive-value(margin-top, 200, 60, 1);
+  padding-bottom: 35px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    background: url(../../assets/Images/footer_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @media screen and (max-width: 991px) {
+      background-size: unset;
+    }
+  }
+}
+
+.footer__top {
+  @include flex(flex-start, space-between);
+  &-logo {
+    width: 30%;
+    .logo-wrap {
+      @include adaptive-value(width, 180, 110, 1);
+      @include adaptive-value(height, 70, 40, 1);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &-directs {
+    @include flex(flex-start, space-between);
+    @include adaptive-value(gap, 100, 15, 1);
+    width: 70%;
+    .directs-wrap {
+      @include flex(flex-start, space-between);
+      @include adaptive-value(gap, 100, 15, 1);
+      .directs {
+        &__item {
+          a {
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: $fontWeight;
+            font-size: 16px;
+            line-height: 24px;
+            color: #313131;
+            transition: $transition;
+            &:hover {
+              color: #939292;
+            }
+          }
+
+          &:not(:last-child) {
+            @include adaptive-value(margin-bottom, 30, 15, 1);
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+  .downloads {
+    &_title {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: $fontWeight;
+      font-size: 16px;
+      line-height: 24px;
+      color: #313131;
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+  }
+}
+
+.footer__bottom {
+  .social {
+    @include adaptive-value(gap, 30, 20, 1);
+    @include adaptive-value(margin-top, 150, 50, 1);
+    @include flex(stretch, flex-start);
+
+    &__item {
+      background: $black;
+      padding: 10px;
+      border-radius: 12px;
+      @include adaptive-value(width, 45, 30, 1);
+      @include adaptive-value(height, 45, 30, 1);
+      cursor: pointer;
+      transition: $transition;
+      &:hover {
+        background: #939292;
+      }
+
+      img {
+        @include flex();
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+    }
+    @include adaptive-value(margin-bottom, 0, 15, 1);
+  }
+  .links {
+    @include flex(center, space-between);
+    &_gamil {
+      &-title {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 500;
+        @include adaptive-value(font-size, 16, 12, 1);
+        @include adaptive-value(line-height, 24, 18, 1);
+        text-decoration: underline;
+        color: $black;
+      }
+    }
+
+    &_site {
+      &-btn {
+        @include flex();
+        background: transparent;
+        border: none;
+        @include adaptive-value(width, 220, 150, 1);
+        @include adaptive-value(height, 50, 35, 1);
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

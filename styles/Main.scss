@@ -4,6 +4,12 @@
 
 @import "./components/navbar.scss", "./components/general",
   "./components/download.scss", "./components/info", "./components/express",
-  "./components/region.scss", "./components/faq.scss";
+  "./components/region.scss", "./components/faq.scss",
+  "./components/footer.scss";
 
 @import "./components/GlobalComponents/bns";
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}

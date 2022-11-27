@@ -1,5 +1,6 @@
 .main-faq {
   margin: 80px 0;
+  scroll-margin-top: 20px;
   @media screen and (max-width: 991px) {
     @include adaptive-value(margin-top, 650, 400, 1);
     margin-top: 400px;
@@ -36,7 +37,7 @@
     @include flex(flex-start, space-between);
     gap: 50px;
     &-accordion {
-      width: 50%;
+      width: 48%;
       .accordion__item {
         width: 80%;
         border: 2px solid $red;
@@ -86,12 +87,13 @@
       }
       @media screen and (max-width: 991px) {
         width: 100%;
-        @include flex();
-        flex-direction: column;
+        .accordion__item {
+          width: 100%;
+        }
       }
     }
     &-question {
-      width: 50%;
+      width: 48%;
       background: #ffffff;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1),
         0px 0px 10px rgba(0, 0, 0, 0.1);

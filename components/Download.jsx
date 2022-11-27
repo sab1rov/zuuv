@@ -6,7 +6,7 @@ import MainImg from "../assets/Images/download-img.png";
 
 function Download() {
   return (
-    <section className="main-download">
+    <section className="main-download" id="download">
       <div className="container">
         <div className="download">
           <div className="download__text">

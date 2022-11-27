@@ -1,3 +1,9 @@
+  body {
+    &.hidden {
+      overflow: hidden;
+    }
+  }
+
 .header {
   margin-top: 25px;
   padding-bottom: 25px;
@@ -17,10 +23,10 @@
 
   &__menu {
     @include flex(center, space-between);
-    gap: 60px;
+    @include adaptive-value(gap, 30, 0, 1);
     .menu {
       @include flex();
-      gap: 35px;
+      @include adaptive-value(gap, 25, 0, 1);
       &__item {
         .nav_link {
           position: relative;
@@ -30,22 +36,20 @@
           font-size: 18px;
           line-height: 27px;
           color: #696969;
-          left: 0;
-          width: 0%;
           transition: $transition;
           &::before {
             content: "";
             position: absolute;
             bottom: 0px;
-
+            left: 0;
+            width: 0%;
             background: $red;
             height: 2px;
           }
           &:hover {
             color: $black;
-            &::before{
+            &::before {
               width: 50%;
-
             }
           }
         }
@@ -64,21 +68,117 @@
       line-height: 27px;
       color: #ffffff;
       transition: $transition;
-      &:hover{
+      &:hover {
         background: transparent;
         color: $red;
         box-shadow: none;
       }
     }
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: 1024px) {
       display: none;
     }
   }
 
-  &__mobile{
-    @media screen and (min-width: 992px) {
-        display: none;
+  &__mobile {
+    background: transparent;
+    border: none;
+    @media screen and (min-width: 1025px) {
+      display: none;
     }
+  }
+
+  &__content-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    transition: $transition;
+    &.show {
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 46px 24px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    z-index: 10;
+    transition: $transition;
+    &-menu {
+      @include flex(flex-start);
+      flex-direction: column;
+      gap: 20px;
+      .menu__item {
+        .nav_link {
+          position: relative;
+          font-family: $mainFont;
+          font-style: normal;
+          font-weight: $fontWeight;
+          font-size: 18px;
+          line-height: 27px;
+          color: #696969;
+          transition: $transition;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 0%;
+            background: $red;
+            height: 2px;
+          }
+          &:hover {
+            color: $black;
+            &::before {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+    .navbar_btn {
+      background: $red;
+      box-shadow: 0px 4px 10px rgba(251, 25, 25, 0.34);
+      @include adaptive-value(width, 250, 180, 1);
+      border: 1px solid $red;
+      padding: 10px 17px;
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 500;
+      @include adaptive-value(font-size, 18, 14, 1);
+      @include adaptive-value(line-height, 27, 21, 1);
+      color: $white;
+      transition: $transition;
+
+      &:hover {
+        background: transparent;
+        color: $red;
+        box-shadow: none;
+      }
+    }
+    .close_icon {
+      @include flex(center, flex-end);
+      &-btn {
+        background: transparent;
+        border: none;
+      }
+    }
+    &.open {
+      left: 40%;
+    }
+    // @media screen and (max-width: 1024px) {
+    //   left: 40%;
+    // }
   }
 }

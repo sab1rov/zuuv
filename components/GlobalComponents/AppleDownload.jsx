@@ -5,9 +5,9 @@ import Apple from "../../assets/Images/App Store.svg";
 function AppleDownload() {
   return (
     <>
-      <button className="button">
+      <a className="button">
         <Image src={Apple} alt="apple" className="button_img" />
-      </button>
+      </a>
     </>
   );
 }

@@ -1,32 +1,12 @@
 import React from "react";
+import { accardionData } from "../data";
 import FaqItem from "./FaqItem";
 
 function Faq() {
-  const accardionData = [
-    {
-      id: 1,
-      title: "Zuv dasturi qanchalik ishonchli",
-      desc: "Mobil ilova orqali yuklaganlaringizni, shu yo'nalishda yo'lga chiqqan transport egalari orqali berib yuborishingiz mumkin. Yo'lovchi sifatida ham  ularga sherik bo'lishingiz mumkin hi lorem ipsum dolor view",
-    },
-    {
-      id: 2,
-      title: "Zuv dasturi qanchalik ishonchli",
-      desc: "Mobil ilova orqali yuklaganlaringizni, shu yo'nalishda yo'lga chiqqan transport egalari orqali berib yuborishingiz mumkin. Yo'lovchi sifatida ham  ularga sherik bo'lishingiz mumkin",
-    },
-    {
-      id: 3,
-      title: "Zuv dasturi qanchalik ishonchli",
-      desc: "Mobil ilova orqali yuklaganlaringizni, shu yo'nalishda yo'lga chiqqan transport egalari orqali berib yuborishingiz mumkin. Yo'lovchi sifatida ham  ularga sherik bo'lishingiz mumkin",
-    },
-    {
-      id: 4,
-      title: "Zuv dasturi qanchalik ishonchli",
-      desc: "Mobil ilova orqali yuklaganlaringizni, shu yo'nalishda yo'lga chiqqan transport egalari orqali berib yuborishingiz mumkin. Yo'lovchi sifatida ham  ularga sherik bo'lishingiz mumkin",
-    },
-  ];
+  
 
   return (
-    <section className="main-faq">
+    <section className="main-faq" id="faq">
       <div className="container">
         <div className="faq">
           <div className="faq__text">
