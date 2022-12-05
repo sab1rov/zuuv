@@ -164,19 +164,23 @@
         }
       }
       .question_btn {
-        button {
-          background: $red;
-          box-shadow: 0px 4px 10px rgba(251, 25, 25, 0.34);
-          @include adaptive-value(width, 250, 125, 1);
-          border: 1px solid $red;
-          padding: 11px 17px;
-          font-family: $mainFont;
-          font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 27px;
-          color: #ffffff;
-          transition: $transition;
+        background: $red;
+        box-shadow: 0px 4px 10px rgba(251, 25, 25, 0.34);
+        @include adaptive-value(width, 250, 125, 1);
+        border: 1px solid $red;
+        padding: 11px 17px;
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #ffffff;
+        transition: $transition;
+        opacity: 0.1;
+        cursor: not-allowed;
+        &.valid {
+          opacity: 1;
+          cursor: pointer;
           &:hover {
             background: transparent;
             color: $red;
@@ -185,8 +189,11 @@
         }
       }
       @media screen and (max-width: 991px) {
-        display: none;
+        width: 100%;
       }
+    }
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
     }
   }
 }

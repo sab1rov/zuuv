@@ -2,10 +2,11 @@
 
 @import "./mixin", "./normmalize", "./varibles";
 
-@import "./components/navbar.scss", "./components/general",
+@import "./components/navbar", "./components/general",
   "./components/download.scss", "./components/info", "./components/express",
   "./components/region.scss", "./components/faq.scss",
-  "./components/footer.scss";
+  "./components/footer.scss", "./components/deactiveBody.scss",
+  "./components/delivery.scss";
 
 @import "./components/GlobalComponents/bns";
 

@@ -10,6 +10,7 @@
 .info {
   @include flex(stretch, space-between);
   gap: 5px;
+  
   &__item {
     @include flex();
     flex-direction: column;

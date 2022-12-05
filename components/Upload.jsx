@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import Samsung from "../assets/Images/Samsung Galaxy S22 Ultra.png";
 
 function Upload() {
@@ -15,7 +15,7 @@ function Upload() {
           </div>
         </div>
       </div>
-      <div className="upload__item"></div>
+      <div className="upload__sitem"></div>
     </section>
   );
 }

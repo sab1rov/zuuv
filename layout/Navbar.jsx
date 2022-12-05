@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import Link from "next/link";
+import { navbarData } from "../data/index.js";
 import Image from "next/image";
 import NavbarX from "../assets/Icons/NavbarX.js";
 import Logo from "../assets/Icons/main_logo.svg";
+import NavLinkItem from "./components/NavLinkItem.jsx";
 
 function Navbar() {
   const menu = useRef(null);
@@ -30,28 +32,13 @@ function Navbar() {
 
           <div className="navbar__menu">
             <ul className="menu">
-              <li className="menu__item ">
-                <Link className="nav_link" href="#general">
-                  Bosh sahifa
-                </Link>
-              </li>
-              <li className="menu__item">
-                <Link className="nav_link" href="#download">
-                  Yuklab oling
-                </Link>
-              </li>
-              <li className="menu__item">
-                <Link className="nav_link" href="#info">
-                  Dastur haqida
-                </Link>
-              </li>
-              <li className="menu__item">
-                <Link className="nav_link" href="#">
-                  Deactivate account
-                </Link>
-              </li>
+              {navbarData.map((item) => (
+                <NavLinkItem key={item?.id} item={item} />
+              ))}
             </ul>
-            <a href="#faq" className="navbar_btn">Biz bilan bog'laning</a>
+            <Link href="/#faq" className="navbar_btn">
+              Biz bilan bog'laning
+            </Link>
           </div>
 
           <button className="navbar__mobile" onClick={() => opneMenu()}>
@@ -75,33 +62,19 @@ function Navbar() {
           ></div>
           <div className="navbar__content" ref={menu}>
             <div className="close_icon">
-              <button className="close_icon-btn" onClick={() => closeMenu()}>
+              <button className="close_icon-btn" onClick={closeMenu}>
                 <NavbarX />
               </button>
             </div>
-            <ul className="navbar__content-menu">
-              <li className="menu__item">
-                <Link className="nav_link" href="#">
-                  Bosh sahifa
-                </Link>
-              </li>
-              <li className="menu__item">
-                <Link className="nav_link" href="#">
-                  Yuklab oling
-                </Link>
-              </li>
-              <li className="menu__item">
-                <Link className="nav_link" href="#">
-                  Dastur haqida
-                </Link>
-              </li>
-              <li className="menu__item">
-                <Link className="nav_link" href="#">
-                  Deactivate account
-                </Link>
-              </li>
+
+            <ul className="menu">
+              {navbarData.map((item) => (
+                <NavLinkItem key={item?.id} item={item} closeMenu={closeMenu}/>
+              ))}
             </ul>
-            <button className="navbar_btn">Biz bilan bog'laning</button>
+            <Link href="/#faq" className="navbar_btn" onClick={closeMenu}>
+              Biz bilan bog'laning
+            </Link>
           </div>
         </div>
       </div>
@@ -110,3 +83,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import MainImg from "../assets/Images/general_img.png";
 import Zuv from "../assets/Images/zuv.png";
 import Airplane from "../assets/Images/Airplane.png";
@@ -17,29 +18,29 @@ function General() {
           <div className="general__content">
             <div className="image-content">
               <div className="main_img">
-              <div className="icons_left">
-                <div className="left_first-img">
-                  <Image src={Airplane} alt="airplane" className=" imgOne" />
+                <div className="icons_left">
+                  <div className="left_first-img">
+                    <Image src={Airplane} alt="airplane" className=" imgOne" />
+                  </div>
+                  <div className="left_second-img">
+                    <Image src={Lugguage} alt="lugguage" className=" imgTwo" />
+                  </div>
+                  <div className="left_third-img">
+                    <Image src={Person} alt="person" className=" imgThree" />
+                  </div>
                 </div>
-                <div className="left_second-img">
-                  <Image src={Lugguage} alt="lugguage" className=" imgTwo" />
-                </div>
-                <div className="left_third-img">
-                  <Image src={Person} alt="person" className=" imgThree" />
-                </div>
-              </div>
                 <Image src={MainImg} alt="main image" className="img-main" />
-              <div className="icons_right">
-                <div className="right_first-img">
-                  <Image src={Automibe} alt="automobile" />
+                <div className="icons_right">
+                  <div className="right_first-img">
+                    <Image src={Automibe} alt="automobile" />
+                  </div>
+                  <div className="right_second-img">
+                    <Image src={Train} alt="train" />
+                  </div>
+                  <div className="right_third-img">
+                    <Image src={AirplaneRight} alt="airplane" />
+                  </div>
                 </div>
-                <div className="right_second-img">
-                  <Image src={Train} alt="train" />
-                </div>
-                <div className="right_third-img">
-                  <Image src={AirplaneRight} alt="airplane" />
-                </div>
-              </div>
               </div>
             </div>
           </div>
@@ -52,7 +53,9 @@ function General() {
               Aholi orasida viloyatlararo odamlar va yuklar qatnovini
               optimallashtirish uchun mobil ilova
             </h3>
-            <button className="general__text-btn">Batafsil</button>
+            <Link className="general__text-btn" href="#info">
+              Batafsil
+            </Link>
           </div>
         </div>
       </div>

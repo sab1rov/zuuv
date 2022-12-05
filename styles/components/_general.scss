@@ -1,5 +1,5 @@
 .main-general {
-  margin-top: 32px;
+  margin-top: 150px;
   border-bottom: 1px solid #a2a2a2;
   scroll-margin-top: 20px;
 }
@@ -32,7 +32,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 10;
+        // z-index: 10;
         .left_first-img {
           top: 0;
           left: 0;
@@ -103,17 +103,19 @@
       margin-bottom: 25px;
     }
     &-btn {
-      background: $red;
-      box-shadow: 0px 4px 10px rgba(251, 25, 25, 0.34);
-      @include adaptive-value(width, 250, 125, 1);
-      border: 1px solid $red;
-      padding: 11px 17px;
+      display: block;
       font-family: $mainFont;
       font-style: normal;
       font-weight: 500;
       font-size: 18px;
       line-height: 27px;
       color: #ffffff;
+      @include adaptive-value(width, 250, 180, 1);
+      text-align: center;
+      background: $red;
+      box-shadow: 0px 4px 10px rgba(251, 25, 25, 0.34);
+      border: 1px solid $red;
+      padding: 11px 17px;
       transition: $transition;
       &:hover {
         background: transparent;
@@ -137,3 +139,5 @@
     justify-content: space-between;
   }
 }
+
+

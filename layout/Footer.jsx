@@ -24,30 +24,30 @@ function Footer() {
             <div className="directs-wrap">
               <ul className="directs">
                 <li className="directs__item">
-                  <a href="">О нас</a>
+                  <a href="#">О нас</a>
                 </li>
                 <li className="directs__item">
-                  <a href="">Партнерство</a>
+                  <a href="#">Партнерство</a>
                 </li>
                 <li className="directs__item">
-                  <a href="">Компания</a>
+                  <a href="#">Компания</a>
                 </li>
                 <li className="directs__item">
-                  <a href="">Контакты</a>
+                  <a href="#">Контакты</a>
                 </li>
               </ul>
               <ul className="directs">
                 <li className="directs__item">
-                  <a href="">О нас</a>
+                  <a href="#">О нас</a>
                 </li>
                 <li className="directs__item">
-                  <a href="">Партнерство</a>
+                  <a href="#">Партнерство</a>
                 </li>
                 <li className="directs__item">
-                  <a href="">Компания</a>
+                  <a href="#">Компания</a>
                 </li>
                 <li className="directs__item">
-                  <a href="">Контакты</a>
+                  <a href="#">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -62,16 +62,16 @@ function Footer() {
 
         <div className="footer__bottom">
           <div className="social">
-            <a className="social__item">
+            <a href="#" className="social__item">
               <Image src={Instagram} alt="icon" />
             </a>
-            <a className="social__item">
+            <a href="#" className="social__item">
               <Image src={Telegram} alt="icon" />
             </a>
-            <a className="social__item">
+            <a href="#" className="social__item">
               <Image src={Facebook} alt="icon" />
             </a>
-            <a className="social__item">
+            <a href="#" className="social__item">
               <Image src={Twitter} alt="icon" />
             </a>
           </div>

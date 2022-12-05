@@ -45,3 +45,26 @@ export const infoData = [
     desc: "Buyumlaringiz tez va butun holatda yetib borishiga kafolat",
   },
 ];
+
+export const navbarData = [
+  {
+    id: 1,
+    link: "/",
+    title: "Bosh sahifa",
+  },
+  {
+    id: 2,
+    link: "/#download",
+    title: "Yuklab oling",
+  },
+  {
+    id: 3,
+    link: "/#info",
+    title: "Dastur haqida",
+  },
+  {
+    id: 4,
+    link: "/deactive",
+    title: "Deactive account",
+  },
+];

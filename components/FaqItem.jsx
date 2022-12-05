@@ -16,6 +16,7 @@ function FaqItem({ item }) {
       view.current.style.maxHeight = view.current.scrollHeight + "px";
     }
   };
+  
   return (
     <li
       className="accordion__item"
